@@ -43,7 +43,8 @@ int main()
 			{
 				averageThreeNotes[0] = (math[0] + english[0] + history[0]) / 3;		//you have to calculate average for every signle
 				printf("Average from 3 subject = %.1f\n", averageThreeNotes[0]);	//subject then you can calculate if student is eligable
-				if (averageThreeNotes[0] > 95)										//for scholarship*/
+				if (averageThreeNotes[0] > 95)										//for scholarship
+					scholarship++;
 					printf("You are eligable for scholarship\n\n");
 			}
 		}
@@ -161,12 +162,17 @@ int main()
 		{
 			printf("STATS\n");
 			printf("\n");
-			printf("Average math note: %.1f \n");
+			math[5] = (math[0] + math[1] + math[2] + math[3] + math[4]) / 5;
+			printf("Average math note: %.1f\n", math[5]);
+
+			english[5] = (english[0] + english[1] + english[2] + english[3] + english[4]) / 5;
 			printf("Average english note: \n");
+
+			math[5] = (math[0] + math[1] + math[2] + math[3] + math[4]) / 5;
 			printf("Average history note: \n");
 			printf("Highest note: \n");
 			printf("Lowest note: \n");
-			printf("Students with a schoolarship: \n\n");
+			printf("Students with a schoolarship: %d\n\n", scholarship);
 			return 0;
 		}
 
